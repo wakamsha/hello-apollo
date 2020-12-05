@@ -1,0 +1,47 @@
+{
+  "name": "hello-apollo",
+  "version": "0.0.0",
+  "repository": "git@github.com:wakamsha/hello-apollo.git",
+  "author": "<wakamsha@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "cspell": "^4.2.5",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.4",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "graphql": "^15.4.0"
+  },
+  "lint-staged": {
+    "./packages/**/src/**/*.{ts,tsx}": [
+      "cspell",
+      "eslint -c .eslintrc.js --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "scripts": {
+    "gql": "   yarn workspace @hello-apollo/graphql",
+    "client": "yarn workspace @hello-apollo/client",
+    "server": "yarn workspace @hello-apollo/server"
+  }
+}

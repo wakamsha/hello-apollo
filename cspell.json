@@ -1,0 +1,10 @@
+{
+  "ignorePaths": [
+    "**/node_modules/**"
+  ],
+  "words": [
+    "codegen",
+    "crishton",
+    "Qiita"
+  ]
+}
