@@ -21,6 +21,6 @@
     "setup": "snowpack install",
     "start": "snowpack dev",
     "build": "snowpack build",
-    "generate": "graphql-codegen --config codegen.yml; eslint -c ../../.eslintrc.js ./graphql/**/*.ts --fix"
+    "generate": "graphql-codegen --config codegen.yml; eslint -c ../../.eslintrc.js ./src/graphql/**/*.ts --fix"
   }
 }
